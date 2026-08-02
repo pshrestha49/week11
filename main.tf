@@ -39,10 +39,10 @@ resource "aws_security_group" "web-sg" {
   }
 
   egress {
-    description = "Allow outbound HTTPS for package updates"
+    description = "Allow outbound HTTPS to trusted internal network only"
     from_port   = 443
     to_port     = 443
     protocol    = "tcp"
-    cidr_blocks = ["0.0.0.0/0"]
+    cidr_blocks = ["203.0.113.0/24"]
   }
 }
