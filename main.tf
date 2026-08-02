@@ -19,7 +19,7 @@ terraform {
     }
   }
 }
-
+# rescan trigger
 provider "aws" {
   region = "us-west-2"
 }
